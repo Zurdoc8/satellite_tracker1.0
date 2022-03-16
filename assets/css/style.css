@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    width: 99vw;
+}
+#sidebar {
+    width: 200px;
+}
+
+.input {
+    width: 150px;
+}
+
+#sat-info p {
+    border: 1px solid #10548b;
+}
