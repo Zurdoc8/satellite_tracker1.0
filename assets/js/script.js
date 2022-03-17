@@ -12,14 +12,26 @@ imageBtn.addEventListener('click', function () {
         try {
             const response = await fetch(imageUrl + imageKey)
             const data = await response.json()
-            console.log('NASA APOD data', data)
+        
+            nasaImage(data) 
         } catch (error) {
             console.log(error)
         }
     }
 
     fetchNASAData()
+
+    // Display image in HTML
+    function nasaImage(inputParam) {
+        console.log('inputParam', inputParam)
+
+        var img = new Image();
+        img.src = inputParam.url;
+        spaceImage.appendChild(img);
+    } 
+
 })
+
 
 
 
