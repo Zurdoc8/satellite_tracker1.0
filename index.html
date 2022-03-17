@@ -18,7 +18,7 @@
 
     <div class="content columns m-0">
         <!--create sidebar here-->
-        <div id="sidebar" class="column is-half m-0 is-block has-background-grey-dark is-narrow-fullhd">
+        <div id="sidebar" class="column is-half m-0 is-block has-background-grey-dark is-narrow-fullhd is-mobile-full">
             <div class="has-text-centered">
                 <h3 class="mb-3 ml-3 mr-3 pt-5 subtitle is-4 has-text-info">
                     Find and View Popular Satellites Currently in Orbit ⭐️
@@ -29,26 +29,42 @@
                     Enter your location to see when a satellite might flyover you!
                 </p>
                 <input class="input is-round is-info is-small ml-5" type="text" placeholder="City, State">
-                <button class="saveBtn ml-6 mb-3">Save Location</button>
+                <button id='saveBtn' class="ml-6 mb-3 button is-info is-small">
+                    Save Location
+                </button>
             </div>
         </div>
         <!--sidebar end-->
     
         <!--create info panel here-->
-        <div class="column" id="info-panel">
-            <div class="has-text-centered">
-                <h4 class="subtitle is-size-3 has-text-info is-italic">
+        <div class="column p-0" id="info-panel">
+            <div id='que' class="has-text-centered has-background-grey-light">
+                <h4 class="p-3 subtitle is-size-3 has-text-info is-italic is-underlined">
                     What's in our atmosphere?
                 </h4>
             </div>
-            <div id="sat-info" class="has-text-centered">
-                <p>
-                    Info about our satellites!
+            <div id="sat-info" class="has-text-centered has-background-grey p-4">
+                <p class="has-text-info-light">
+                    Here at Satellite Tracker 1.0, we track some of the most popular satellites. 
+                    Available to view today are The International Space Station, 
+                    The Hubble Space Telescope, The Chinese Space Station, and GOES-16. 
+                    Launch dates for these satellites range from 1990 all the way to 2021! 
+                    Each satellite has its own purpose, which we will go into upon selection.
                 </p>
+            </br>
+                <p class="has-text-info-light is-italic">Ready to Explore?</p>
+                <!--dropdown will go here-->
+                <button id="exploreBtn" class="button is-info is-small">Blast Off 🚀 </button>
             </div>
         </div>
         <!--info panel end-->
+
+        <!--div to hold populated sat cards-->
+        <div class="content has-background-grey-light">
+        </div>
+        <!--sat card div end-->
     </div>
+
     <!--footer here-->
     <footer>
         <div id="footer" class="m-0 has-text-centered has-background-grey-dark">
