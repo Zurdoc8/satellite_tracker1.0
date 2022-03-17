@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
-<body>
+<body class="has-background-grey-light">
     <header class="m-0 has-background-grey-dark">
         <h1 class="p-2 title is-2 has-text-centered has-text-info">
             Satellite Tracker 1.0 🛰
@@ -28,10 +28,12 @@
                 <p class="p-3 is-size-5 has-text-info-light has-text-centered">
                     Enter your location to see when a satellite might flyover you!
                 </p>
-                <input class="input is-round is-info is-small ml-5" type="text" placeholder="City, State">
-                <button id='saveBtn' class="ml-6 mb-3 button is-info is-small">
-                    Save Location
-                </button>
+                <div class="location-input">
+                    <input class="input is-round is-info is-small ml-5" type="text" placeholder="City, State">
+                    <button id='saveBtn' class="ml-6 mb-3 button is-info is-small">
+                        Save Location
+                    </button>
+                </div>
             </div>
         </div>
         <!--sidebar end-->
@@ -44,17 +46,30 @@
                 </h4>
             </div>
             <div id="sat-info" class="has-text-centered has-background-grey p-4">
-                <p class="has-text-info-light">
+                <p class="is-size-5 has-text-info-light">
                     Here at Satellite Tracker 1.0, we track some of the most popular satellites. 
                     Available to view today are The International Space Station, 
                     The Hubble Space Telescope, The Chinese Space Station, and GOES-16. 
                     Launch dates for these satellites range from 1990 all the way to 2021! 
-                    Each satellite has its own purpose, which we will go into upon selection.
+                    Each satellite has its own unique purpose and mission, which we will go into upon selection.
                 </p>
             </br>
-                <p class="has-text-info-light is-italic">Ready to Explore?</p>
                 <!--dropdown will go here-->
-                <button id="exploreBtn" class="button is-info is-small">Blast Off 🚀 </button>
+                <div class="field">
+                    <label class="is-size-5 has-text-info-light">Ready to Explore?</label>
+                    <p class="control mt-2 mb-2">
+                      <span class="select">
+                        <select>
+                          <option>Select Satellite</option>
+                          <option>ISS</option>
+                          <option>Starlink</option>
+                          <option>Hubble</option>
+                          <option>Chinese Space Station</option>
+                        </select>
+                      </span>
+                    </p>
+                    <button id='exploreBtn' class="button is-info is-normal">Blast Off 🚀 </button>
+                  </div>
             </div>
         </div>
         <!--info panel end-->
@@ -67,7 +82,7 @@
 
     <!--footer here-->
     <footer>
-        <div id="footer" class="m-0 has-text-centered has-background-grey-dark">
+        <div id="footer" class="has-text-centered has-background-grey-dark">
             <p class="p-3 has-text-info-light ">Made with love by: Deena, Andres, and Autumn 💙 🌎 💫</p>
         </div>
     </footer>
