@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 10vh;
+    width: 98.5vw;
+}
+
+header {
+    border-bottom: 2px solid #121a27;
+}
+#sidebar {
+    width: 200px;
+}
+
+.input {
+    width: 150px;
+}
+
+#que {
+    border-bottom: 2px solid#121a27;
+}
