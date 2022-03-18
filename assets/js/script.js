@@ -4,6 +4,12 @@
 var imageBtn = document.getElementById('exploreBtn');
 var spaceImage = document.getElementById('images');
 var imageUrl = 'https://api.nasa.gov/planetary/apod?api_key='
+
+const config = {
+    nasa_api_key: `Jmooles2hiSkfkS4ibQMjXPovBcmyRlbq31RfhiQ`
+
+}
+
 var imageKey = config.nasa_api_key
 
 
