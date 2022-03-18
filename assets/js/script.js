@@ -4,6 +4,7 @@
 var imageBtn = document.getElementById('exploreBtn');
 var spaceImage = document.getElementById('images');
 var imageUrl = 'https://api.nasa.gov/planetary/apod?api_key=Jmooles2hiSkfkS4ibQMjXPovBcmyRlbq31RfhiQ'
+var imageInfo = document.getElementById('image-description');
 
 
 imageBtn.addEventListener('click', function () {
@@ -27,6 +28,9 @@ imageBtn.addEventListener('click', function () {
         var img = new Image();
         img.src = inputParam.url;
         spaceImage.appendChild(img);
+
+        // Display image info in HTML
+        imageInfo.innerHTML = inputParam.explanation;
     } 
 
 })
