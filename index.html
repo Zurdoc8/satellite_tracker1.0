@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
+
 <body class="has-background-grey-light">
     <header class="m-0 has-background-grey-dark">
         <h1 class="p-2 title is-2 has-text-centered has-text-info">
@@ -35,9 +37,16 @@
                     </button>
                 </div>
             </div>
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <div class="content has-background-grey-light" id="satpos">
+                      </figure>
+                </div>
+                </div>
         </div>
         <!--sidebar end-->
-    
+
         <!--create info panel here-->
         <div class="column p-0" id="info-panel">
             <div id='que' class="has-text-centered has-background-grey-light">
@@ -47,37 +56,62 @@
             </div>
             <div id="sat-info" class="has-text-centered has-background-grey p-4">
                 <p class="is-size-5 has-text-info-light">
-                    Here at Satellite Tracker 1.0, we track some of the most popular satellites. 
-                    Available to view today are The International Space Station, 
-                    The Hubble Space Telescope, The Chinese Space Station, and GOES-16. 
-                    Launch dates for these satellites range from 1990 all the way to 2021! 
+                    Here at Satellite Tracker 1.0, we track some of the most popular satellites.
+                    Available to view today are The International Space Station,
+                    The Hubble Space Telescope, The Chinese Space Station, and GOES-16.
+                    Launch dates for these satellites range from 1990 all the way to 2021!
                     Each satellite has its own unique purpose and mission, which we will go into upon selection.
                 </p>
-            </br>
+                </br>
                 <!--dropdown will go here-->
                 <div class="field">
                     <label class="is-size-5 has-text-info-light">Ready to Explore?</label>
                     <p class="control mt-2 mb-2">
-                      <span class="select">
-                        <select>
-                          <option>Select Satellite</option>
-                          <option>ISS</option>
-                          <option>Starlink</option>
-                          <option>Hubble</option>
-                          <option>Chinese Space Station</option>
-                        </select>
-                      </span>
+                        <span class="select">
+                            <select>
+                                <option>Select Satellite</option>
+                                <option>ISS</option>
+                                <option>Starlink</option>
+                                <option>Hubble</option>
+                                <option>Chinese Space Station</option>
+                            </select>
+                        </span>
                     </p>
                     <button id='exploreBtn' class="button is-info is-normal">Blast Off 🚀 </button>
-                  </div>
+                </div>
+                <div class="card">
+<<<<<<< HEAD
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <div class="content has-background-grey-light" id="images">
+                          </figure>
+                    </div>
+                    </div>
+                </div>
+        
+=======
+                    <div class="card-content" id="image-description"></div>
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <div class="content has-background-grey-light" id="images">
+                        </figure>
+                    </div>
+                </div>
+>>>>>>> 90fdf30f14dbf053c2e1c778dcd39d042cad3d0c
             </div>
         </div>
-        <!--info panel end-->
+    </div>
+    <!--info panel end-->
 
+<<<<<<< HEAD
         <!--div to hold populated sat cards-->
-        <div class="content has-background-grey-light">
-        </div>
         <!--sat card div end-->
+=======
+    <!--div to hold populated sat cards-->
+    <div class="content has-background-grey-light" id="images">
+    </div>
+    <!--sat card div end-->
+>>>>>>> 90fdf30f14dbf053c2e1c778dcd39d042cad3d0c
     </div>
 
     <!--footer here-->
@@ -88,6 +122,11 @@
     </footer>
     <!--footer end-->
     <!--script links go here-->
-    <script src="./assets/js/script.js"></script>
+<<<<<<< HEAD
+    <!--<script type="text/javascript" src="./assets/js/config.js"></script>-->
+=======
+>>>>>>> 90fdf30f14dbf053c2e1c778dcd39d042cad3d0c
+    <script type="text/javascript" src="./assets/js/script.js"></script>
 </body>
+
 </html>
