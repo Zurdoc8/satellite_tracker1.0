@@ -5,6 +5,9 @@ var imageBtn = document.getElementById('exploreBtn');
 var spaceImage = document.getElementById('images');
 var imageUrl = 'https://api.nasa.gov/planetary/apod?api_key=Jmooles2hiSkfkS4ibQMjXPovBcmyRlbq31RfhiQ'
 var imageInfo = document.getElementById('image-description');
+var satURL = 'https://api.n2yo.com/rest/v1/satellite/';
+ 
+
 
 
 imageBtn.addEventListener('click', function () {
@@ -14,9 +17,27 @@ imageBtn.addEventListener('click', function () {
             const data = await response.json()
         
             nasaImage(data) 
+
+            let selectValue  = $("#selectSats").val();
+            
+            console.log(selectValue);               
+            let settings = {
+                        "async": true,
+                        "crossDomain": true,
+                        "url": "https://uphere-space1.p.rapidapi.com/satellite/" +selectValue+ "/location?units=imperial&lng=122.374199&lat=47.6484346",
+                        "method": "GET",
+                        "headers": {
+                            "x-rapidapi-host": "uphere-space1.p.rapidapi.com",
+                            "x-rapidapi-key": "73d7512d46msh8fd2715f8330786p168bd7jsnbd8ccc7c4fa1"
+                        }
+                    };
+                    
+                    satCoord(settings);
+                
         } catch (error) {
             console.log(error)
         }
+
     }
 
     fetchNASAData()
@@ -33,7 +54,19 @@ imageBtn.addEventListener('click', function () {
         imageInfo.innerHTML = inputParam.explanation;
     } 
 
-})
+    
+    function satCoord(settings){
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            
+            
+        });
+    }
+    
+    
+});
+
+
 
 
 

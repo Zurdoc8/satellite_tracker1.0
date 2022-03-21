@@ -68,28 +68,18 @@
                     <label class="is-size-5 has-text-info-light">Ready to Explore?</label>
                     <p class="control mt-2 mb-2">
                         <span class="select">
-                            <select>
-                                <option>Select Satellite</option>
-                                <option>ISS</option>
-                                <option>Starlink</option>
-                                <option>Hubble</option>
-                                <option>Chinese Space Station</option>
+                            <select id="selectSats">
+                                <option value="">Select Satellite</option>
+                                <option id="iss" value="25544">ISS</option>
+                                <option id="starlink" value="51898">Starlink</option>
+                                <option id="hubble" value="20580">Hubble</option>
+                                <option id="chineseSS" value="48274">Chinese Space Station</option>
                             </select>
                         </span>
                     </p>
                     <button id='exploreBtn' class="button is-info is-normal">Blast Off 🚀 </button>
                 </div>
                 <div class="card">
-<<<<<<< HEAD
-                    <div class="card-image">
-                        <figure class="image is-4by3">
-                            <div class="content has-background-grey-light" id="images">
-                          </figure>
-                    </div>
-                    </div>
-                </div>
-        
-=======
                     <div class="card-content" id="image-description"></div>
                     <div class="card-image">
                         <figure class="image is-4by3">
@@ -97,21 +87,16 @@
                         </figure>
                     </div>
                 </div>
->>>>>>> 90fdf30f14dbf053c2e1c778dcd39d042cad3d0c
             </div>
+        </div>
         </div>
     </div>
     <!--info panel end-->
 
-<<<<<<< HEAD
-        <!--div to hold populated sat cards-->
-        <!--sat card div end-->
-=======
     <!--div to hold populated sat cards-->
     <div class="content has-background-grey-light" id="images">
     </div>
     <!--sat card div end-->
->>>>>>> 90fdf30f14dbf053c2e1c778dcd39d042cad3d0c
     </div>
 
     <!--footer here-->
@@ -122,10 +107,7 @@
     </footer>
     <!--footer end-->
     <!--script links go here-->
-<<<<<<< HEAD
-    <!--<script type="text/javascript" src="./assets/js/config.js"></script>-->
-=======
->>>>>>> 90fdf30f14dbf053c2e1c778dcd39d042cad3d0c
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script> 
     <script type="text/javascript" src="./assets/js/script.js"></script>
 </body>
 
