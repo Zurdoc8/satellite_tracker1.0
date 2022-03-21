@@ -3,10 +3,10 @@
 // Blast Off click randomly generates image from API 
 var imageBtn = document.getElementById('exploreBtn');
 var spaceImage = document.getElementById('images');
-var imageUrl = 'https://api.nasa.gov/planetary/apod?api_key=Jmooles2hiSkfkS4ibQMjXPovBcmyRlbq31RfhiQ'
+var imageUrl = 'https://api.nasa.gov/planetary/apod?api_key=Jmooles2hiSkfkS4ibQMjXPovBcmyRlbq31RfhiQ';
 var imageInfo = document.getElementById('image-description');
 var satURL = 'https://api.n2yo.com/rest/v1/satellite/';
- 
+var satCoords; 
 
 
 
@@ -16,6 +16,7 @@ imageBtn.addEventListener('click', function () {
             const response = await fetch(imageUrl)
             const data = await response.json()
         
+            // Retrievs satellite info/lat and long
             nasaImage(data) 
 
             let selectValue  = $("#selectSats").val();
@@ -60,8 +61,26 @@ imageBtn.addEventListener('click', function () {
             console.log(response);
             
             
+            satCoords = response.coordinates;
+            console.log(satCoords)
+
+            var map = L.map('map').setView(satCoords.reverse(), 13);
+    
+
+            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: 'pk.eyJ1IjoiZHJhZXNtaXRoIiwiYSI6ImNsMTB5bWwyeTAxc3Mzam5wYnlnMHgyaDQifQ.Tg2IIHMMczRELrZ4h_sYLA'
+
+             }).addTo(map);
+
         });
     }
+
+    
     
     
 });
