@@ -79,8 +79,6 @@ imageBtn.addEventListener('click', function () {
 
         });
     }
-
-    
 });
 
 //save to user location to localStorage
