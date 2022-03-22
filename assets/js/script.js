@@ -7,7 +7,8 @@ var imageUrl = 'https://api.nasa.gov/planetary/apod?api_key=Jmooles2hiSkfkS4ibQM
 var imageInfo = document.getElementById('image-description');
 var satURL = 'https://api.n2yo.com/rest/v1/satellite/';
 var satCoords; 
-
+var selectValue;
+var map;
 
 
 imageBtn.addEventListener('click', function () {
@@ -19,9 +20,8 @@ imageBtn.addEventListener('click', function () {
             // Retrievs satellite info/lat and long
             nasaImage(data) 
 
-            let selectValue  = $("#selectSats").val();
+            selectValue = $("#selectSats").val();
             
-            console.log(selectValue);               
             let settings = {
                         "async": true,
                         "crossDomain": true,
@@ -64,7 +64,10 @@ imageBtn.addEventListener('click', function () {
             satCoords = response.coordinates;
             console.log(satCoords)
 
-            var map = L.map('map').setView(satCoords.reverse(), 13);
+
+            map = L.map('map').setView(satCoords.reverse(), 3);
+            var marker = L.marker(satCoords);
+            marker.addTo(map);
     
 
             L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -76,18 +79,21 @@ imageBtn.addEventListener('click', function () {
             accessToken: 'pk.eyJ1IjoiZHJhZXNtaXRoIiwiYSI6ImNsMTB5bWwyeTAxc3Mzam5wYnlnMHgyaDQifQ.Tg2IIHMMczRELrZ4h_sYLA'
 
              }).addTo(map);
-
+             localStorage.setItem(selectValue, satCoords);
         });
     }
 
     
+ 
 });
 
-//save to user location to localStorage
+
+
+//save to user coordinates to localStorage
 // $("#saveBtn").on('click', function () {
-        //create var to hold value of input field
+//         create var to hold value of input field
 //     var example = $("#locInput").val();
-        //set key: location, value: variable example above
+//         set key: location, value: variable example above
 //     localStorage.setItem('location', example);
 // });
 
