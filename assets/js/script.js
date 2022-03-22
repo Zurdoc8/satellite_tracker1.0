@@ -82,9 +82,6 @@ imageBtn.addEventListener('click', function () {
             localStorage.setItem(selectValue, satCoords);
         });
     }
-
-
-
 });
 
 
