@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Satellite Tracker 1.0</title>
+    <title>Satellite Tracker</title>
     <!--css links go here-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -17,7 +17,7 @@
 <body class="has-background-grey-light">
     <header class="m-0 has-background-grey-dark">
         <h1 class="p-2 title is-2 has-text-centered has-text-info">
-            Satellite Tracker 1.0 🛰
+            Satellite Tracker 🛰
         </h1>
     </header>
 
@@ -34,19 +34,13 @@
                     Enter your location to see when a satellite might fly over you!
                 </p>
                 <div class="location-input">
-                    <input class="input is-round is-info is-small ml-5" type="text" placeholder="City, State">
+                    <input id='locInput' class="input is-round is-info is-small ml-5" type="text" placeholder="City, State">
                     <button id='saveBtn' class="ml-6 mb-3 button is-info is-small">
                         Save Location
                     </button>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-image">
-                    <figure class="image is-4by3">
-                        <div class="content has-background-grey-light" id="satpos"></div>
-                    </figure>
-                </div>
-            </div>
+
             
         </div>
         <!--sidebar end-->
@@ -81,7 +75,7 @@
                             </select>
                         </span>
                     </p>
-                    <button id='exploreBtn' class="button is-info is-normal">Blast Off 🚀 </button>
+                    <button id='exploreBtn' class="button is-info is-normal">Get Inspo 🌌 </button>
                 </div>
                 <div id="map"></div>
                 <div class="card">

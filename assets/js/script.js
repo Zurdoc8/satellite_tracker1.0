@@ -81,12 +81,15 @@ imageBtn.addEventListener('click', function () {
     }
 
     
-    
-    
 });
 
-
-
+//save to user location to localStorage
+// $("#saveBtn").on('click', function () {
+        //create var to hold value of input field
+//     var example = $("#locInput").val();
+        //set key: location, value: variable example above
+//     localStorage.setItem('location', example);
+// });
 
 
 
