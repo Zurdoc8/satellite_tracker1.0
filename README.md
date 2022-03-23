@@ -16,7 +16,8 @@ From the get go, Group 8 had great communication and a solid vision of what we n
 * Bulma CSS Framework
 ### Preview of Our Work 💫
 Find our deployed site [here!](https://zurdoc8.github.io/satellite_tracker1.0/)
-![screenshot of current state of the site.](./assets/images/final-sat-tracker.png)
+![screenshot of current state of the site.]![final-sat-tracker](https://user-images.githubusercontent.com/97048430/159814491-85a8689b-3de2-43a4-860c-adf042fc1b5b.png)
+
 #### Contributors 💙
 * Andres Garza
 * Deena Smith
